@@ -4,15 +4,12 @@
 import { useMemo } from 'react'
 import './App.css'
 import RoundBox from '../components/ui/roundbox.jsx'
-import TextRound from '../components/ui/textround'
 import  {text}  from '../../pages/text.data';
-import ErrorBoundary from '../components/ui/ErrorBoundary';
 
 
 
 function App() {
   // const [count, setCount] = useState(0)
-  TextRound('gf','gfd')
   const Render = useMemo(() => text.filter(),[]);
   
   return (
@@ -20,7 +17,7 @@ function App() {
     <div style={{display: 'flex'}}>
     {Render.length ? Render.map(text =>
     <RoundBox key={text.id} text={text} /> 
-    ) : <ErrorBoundary/>
+    ) : console.error(error)
     }
     </div>
 
