@@ -9,15 +9,8 @@ class ErrorBoundary extends Component {
         const { error } = this.state;
 
         if (error) {
-            return (
-                <div>
-                    <p>Seems like an error occured!</p>
-                    <p>{error.message}</p>
-                </div>
-            );
+            return <this.props.ErrorComponent error={error} />;
         }
         return this.props.children;
     }
 }
-
-export default ErrorBoundary;
