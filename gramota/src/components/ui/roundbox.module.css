@@ -1,0 +1,15 @@
+.RoundBox{
+    border: 2px solid rgb(43, 233, 0);
+    border-radius: 15px;
+    padding: 10px;
+    height: 200px;
+    width: 150px;;
+}
+
+.BoxTittle{
+    font-size: 32px;
+}
+
+.BoxText{
+    font-size: 24px;
+}
