@@ -1,6 +1,6 @@
 import styles from './roundbox.module.css'
 
-const RoundBox = ({text}) =>{
+const RoundBox = (text) =>{
   return (
     <div className={styles.RoundBox}>
        <h5 className={styles.BoxTitle}>{text.title}</h5>
