@@ -1,10 +1,12 @@
-import { Link } from "react-router-dom"
 import mouse from "./mouse.png"
 
-function TaskOne(props) {
+function TaskOne2(props) {
 
-    function NextClick(){
+    function BackClick(){
         window.location.assign('http://localhost:5173/taskOne/1');
+    }
+    function NextClick(){
+        window.location.assign('http://localhost:5173/taskOne/3');
     }
 
     return (
@@ -24,7 +26,8 @@ function TaskOne(props) {
                                 <div className='card card__task'>
                                     <h1>{props.title}</h1>
                                     <div className='card__descr'>{props.descr}</div>
-                                    <button className="btn active" onClick={NextClick}>Далее</button>
+                                    <button onClick={BackClick()}>назад</button>
+                                    <button onClick={NextClick()}>Далее</button>
                                 </div>
                             </div>
                         </div>
@@ -35,4 +38,4 @@ function TaskOne(props) {
     )
 }
 
-export default TaskOne
+export default TaskOne2

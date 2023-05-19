@@ -1,38 +1,76 @@
 body {
     margin: 0;
     padding: 0;
-    user-select: none !important;
-    height: 100vh;
 }
+    
 
 .warp {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
+    background-color: #ffffff;
+    user-select: none !important;
+    height: 100vh;
+
 }
 
 .warp__home {
-    background-image: url(./src/pages/homepage/background.jpg);
+    background-image: url(backgroundhome.jpg);
+}
+
+.warp__login{
+    background-image: url(backgroundtaskone.jpg);
+    filter: brightness(88%);
+    padding: 0 10%;
 }
 
 
 .warp__taskone {
+    background-image: url(backgroundtaskone.jpg);
+    filter: brightness(88%);
+    padding: 0 10%;
+}
 
-    background-color: #ffffff;
-    background-image: url(./src/pages/taskOne/background.jpg);
-    filter: brightness(88%)
+.warp__game1{
+    display: flex;
+    justify-content: center;
+    background-image: url(backgroundtaskone.jpg);
+    filter: brightness(88%);
+    padding: 0 10%;
 }
 
 .mainpage {
     display: flex;
     flex-direction: row;
     align-items: center;
+    
+    
+}
+
+.pagegame{
+    display: flex;
+    align-items: center;
+}
+
+.mainpage__home{
     height: 100vh;
-    max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
     margin-left: 250px;
     gap: 30px;
+}
+
+.mainpage__task{
+    justify-content: space-between;
+    padding: 0 600px;
+    margin: 0 auto;
+}
+
+.mainpage__login{
+    justify-content: center;
+    padding: 0;
+    margin-left: 0;
+    gap: 0;
 }
 
 .maintitle {
@@ -71,7 +109,13 @@ body {
     width: 730px;
 }
 
-/* карточка */
+.card_wrap1{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+/* карточки */
 .card {
     background: rgb(187, 187, 187);
     border-radius: 15px;
@@ -79,9 +123,46 @@ body {
     padding: 45px 35px 40px 35px;
 }
 
-.card__task {
-    background: rgb(194, 193, 193);
+
+
+.card__taskglobal{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0;
+    border: 0px;
+    padding: 0;
+    height: 100vh;
+    background: rgb(210, 210, 210);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
+
+.card__task {
+    background: rgb(184, 224, 207);
+    width: 20vw;
+    height: 50vh;
+
+}
+
+.card__login{
+    position: relative;
+    display: grid;
+    width: 500px
+}
+
+.card__reg{
+    width: 500px;
+    padding: 45px;
+}
+
+.card__game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20vw;
+}
+
+/* внутрености карточек */
 
 .card__title {
     font-size: 26px;
@@ -92,6 +173,7 @@ body {
     font-size: 22px;
 }
 
+/* кнопки */
 .btn {
     background-color: #6CCAA8aa;
     display: block;
@@ -111,8 +193,7 @@ body {
 .mousebtn__lkm,
 .mousebtn__pkm,
 .mousebtn__ckm,
-.mousebtn__four
- {
+.mousebtn__four {
     background-color: #2fcf5faa;
     position: absolute;
     width: 50px;
@@ -135,6 +216,17 @@ body {
     top: 35.5%;
 }
 
+.btn__loginpage{
+    border-radius: 15px;
+    height: 30px;
+}
+
+.btn__regpage{
+    border-radius: 15px;
+    width: 150px;
+    height: 30px;
+}
+
 @keyframes glowing {
     0% {
         background-color: rgba(0, 255, 0, 0.7);
@@ -151,3 +243,44 @@ body {
         box-shadow: 0 0 3px rgba(150, 255, 150, 0.7);
     }
 }
+
+/* инпуты */
+
+input{
+    width: 10wh;
+
+}
+
+/* игровая доска*/
+
+css
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #a9a9a9;
+  margin: 2px;
+}
+
+.cell.active {
+    background-color: #f00;
+  }
+
+  /* текст */
+
+  .gamedecr{
+    font-size: 24px;
+  }
