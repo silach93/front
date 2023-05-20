@@ -1,16 +1,13 @@
 import { Link } from "react-router-dom"
 import mouse from "./mouse.png"
+import Btn from "../../components/ui/Button";
 
 function TaskOne(props) {
-
-    function NextClick(){
-        window.location.assign('http://localhost:5173/taskOne/1');
-    }
 
     return (
         <>
             <div className='warp'>
-                <div className='warp warp__taskone'>
+                <div className='warp warp__task'>
                     <div className='card card__taskglobal'>
                         <div className='mainpage marginpage__task'>
                             <div style={{ position: 'relative' }}>
@@ -24,7 +21,9 @@ function TaskOne(props) {
                                 <div className='card card__task'>
                                     <h1>{props.title}</h1>
                                     <div className='card__descr'>{props.descr}</div>
-                                    <button className="btn active" onClick={NextClick}>Далее</button>
+                                    <div style={{justifyContent:"centre"}}>
+                                    <Btn hf="/taskOne/1" descr="Далее"/>
+                                    </div>
                                 </div>
                             </div>
                         </div>

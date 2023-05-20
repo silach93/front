@@ -1,6 +1,6 @@
 import Board from '../../components/ui/Board/index.jsx'
 
-function TaskGameOne() {
+function TaskGameOne(props) {
 
     return (
         <>
@@ -8,13 +8,10 @@ function TaskGameOne() {
             <div className='warp warp__game1'>
                 <div className='card__game'>
                     <h1>
-                        пᴘᴀвилᴀ игᴘы
+                        {props.title}
                     </h1>
                     <p className='gamedecr'>
-                        На экране поле с шариками.
-                        Необходимо найти шарик другого цвета,
-                        навести на него курсор и кликнуть по
-                        нему левой кнопкой мыши.
+                        {props.descr}
                     </p>
                 </div>
                 <div className='pagegame'>

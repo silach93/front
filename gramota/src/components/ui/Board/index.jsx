@@ -20,7 +20,7 @@ class Board extends React.Component {
       } while (newActiveCell === activeCell);
       newCells[newActiveCell] = true;
       this.setState({ cells: newCells, activeCell: newActiveCell });
-    }, 1000);
+    }, 3000);
   }
 
   componentWillUnmount() {
@@ -28,17 +28,10 @@ class Board extends React.Component {
   }
 
   handleClick = (index) => {
-    const { cells } = this.state;
-    const newCells = [...cells];
-    for (let i = index; i < index + 10; i++) {
-      for (let j = index % 10; j < index % 10 + 10; j++) {
-        const cellIndex = i * 10 + j;
-        if (cellIndex < 100) {
-          newCells[cellIndex] = !newCells[cellIndex];
-        }
-      }
+    if (index === activeCell)
+    {
+      this.render()
     }
-    this.setState({ cells: newCells });
   }
 
   render() {
@@ -48,7 +41,13 @@ class Board extends React.Component {
       for (let j = 0; j < 10; j++) {
         const index = i * 10 + j;
         const isActive = this.state.cells[index];
-        cells.push(<div key={`${i}-${j}`} className={`cell ${isActive ? 'active' : ''}`} onClick={() => this.handleClick(index)}></div>);
+        cells.push(
+          <div key={`${i}-${j}`}
+            className={`cell ${isActive ? 'active' : ''}`}
+            onClick={() => this.handleClick(index)}
+          >
+
+          </div>);
       }
       rows.push(<div key={i} className="row">{cells}</div>);
     }
