@@ -27,11 +27,8 @@ class Board extends React.Component {
     clearInterval(this.timer);
   }
 
-  handleClick = (index) => {
-    if (index === activeCell)
-    {
-      this.render()
-    }
+  handleClick = () => {
+   
   }
 
   render() {

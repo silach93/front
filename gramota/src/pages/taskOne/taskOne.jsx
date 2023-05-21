@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import mouse from "./mouse.png"
 import Btn from "../../components/ui/Button";
 

@@ -66,16 +66,18 @@ body {
     padding: 0 10%;
 }
 
+.pagegame{
+    display: flex;
+    align-items: center;
+}
+
 .mainpage {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.pagegame{
-    display: flex;
-    align-items: center;
-}
+
 
 .mainpage__home{
     height: 100vh;
@@ -256,8 +258,8 @@ body {
 
 @keyframes glowing {
     0% {
-        background-color: rgba(0, 255, 0, 0.7);
-        box-shadow: 0 0 3px rgba(0, 255, 0, 0.7);
+        background-color: rgba(150, 255, 150, 0.7);
+        box-shadow: 0 0 3px rgba(150, 255, 150, 0.7);
     }
 
     50% {
@@ -313,6 +315,13 @@ css
   }
 
   /* клавиатура */
+.container-klava{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
 
   input {
     width: 100%;
@@ -320,6 +329,7 @@ css
     padding: 20px;
     font-size: 20px;
     border: none;
+    border-radius: 15px;
     box-sizing: border-box;
   }
   

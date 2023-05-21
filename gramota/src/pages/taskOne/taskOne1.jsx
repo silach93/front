@@ -13,7 +13,7 @@ function TaskOne1(props) {
                         <div className='mainpage marginpage__task'>
                             <div style={{ position: 'relative' }}>
                                 <img src={mouse} />
-                                <button className='btn mousebtn__lkm'></button>
+                                <button className='btn mousebtn__lkm active'></button>
                                 <button className='btn mousebtn__pkm'></button>
                                 <button className='btn mousebtn__ckm'></button>
                                 <button className='btn mousebtn__four'></button>

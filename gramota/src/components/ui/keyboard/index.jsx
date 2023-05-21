@@ -41,7 +41,7 @@ class keyBoard extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{padding: '15px'}}>
         <input
           value={this.state.input}
           placeholder={"Tap on the virtual keyboard to start"}

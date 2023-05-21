@@ -10,9 +10,13 @@ import TaskGameOne from './pages/taskOne/taskonegame'
 import ErrorPage from "./pages/ErrorPage/Error-page";
 import Login from './pages/loginpage/login';
 import Registr from './pages/regpage/registration'
-import inputTask from "./pages/inputTask/inputTask";
+import InputTask from "./pages/inputTask/inputTask";
 
 const router = createBrowserRouter([
+  {
+    path: '*',
+    element: <ErrorPage />,
+  },
   {
     path: "/",
     element: <Home/>,
@@ -99,7 +103,7 @@ const router = createBrowserRouter([
   ,
   {
     path: "/taskTwo",
-    element: <inputTask/>,
+    element: <InputTask/>,
     errorElement: <ErrorPage />,
   }
 ]);

@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 
 
 function Home() {
-
-
-
     return (
         <>
             <div className='warp warp__home'>

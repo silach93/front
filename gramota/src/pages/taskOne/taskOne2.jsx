@@ -3,13 +3,6 @@ import Btn from "../../components/ui/Button";
 
 function TaskOne2(props) {
 
-    function BackClick(){
-        window.location.assign('http://localhost:5173/taskOne/1');
-    }
-    function NextClick(){
-        window.location.assign('http://localhost:5173/taskOne/3');
-    }
-
     return (
         <>
             <div className='warp'>
@@ -19,7 +12,7 @@ function TaskOne2(props) {
                             <div style={{ position: 'relative' }}>
                                 <img src={mouse} />
                                 <button className='btn mousebtn__lkm'></button>
-                                <button className='btn mousebtn__pkm'></button>
+                                <button className='btn mousebtn__pkm active'></button>
                                 <button className='btn mousebtn__ckm'></button>
                                 <button className='btn mousebtn__four'></button>
                             </div>

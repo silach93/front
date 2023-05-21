@@ -16,7 +16,7 @@ function TaskOne3(props) {
                                 <img src={mouse} />
                                 <button className='btn mousebtn__lkm'></button>
                                 <button className='btn mousebtn__pkm'></button>
-                                <button className='btn mousebtn__ckm'></button>
+                                <button className='btn mousebtn__ckm active'></button>
                                 <button className='btn mousebtn__four'></button>
                             </div>
                             <div className='card_warp1'>
