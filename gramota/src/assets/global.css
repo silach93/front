@@ -173,6 +173,11 @@ body {
 
 }
 
+.card__two{
+    background: rgb(184, 224, 207);
+    width: 20vw;
+}
+
 .card__login{
     position: relative;
     display: grid;
@@ -321,7 +326,6 @@ css
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
     height: 100vh;
 }
 

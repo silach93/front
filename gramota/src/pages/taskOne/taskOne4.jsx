@@ -15,8 +15,13 @@ function TaskOne4(props) {
                                 <div className='card card__task'>
                                     <h1>{props.title}</h1>
                                     <div className='card__descr'>{props.descr}</div>
+                                    <div style={{ 
+                                    display: 'flex', 
+                                    justifyContent: 'space-between'
+                                    }}>
                                     <Btn hf="/taskOne/3" descr="Назад"/>
                                     <Btn hf="/taskOne/game" descr="К игре"/>
+                                    </div>
                                 </div>
                             </div>
                             <div style={{ position: 'relative' }}>

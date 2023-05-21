@@ -6,10 +6,7 @@ function InputTask() {
         <>
             <div className="warp warp__task">
                 <div className='mainpage'>
-                    <div className='card card__task'
-                        style={{
-                            height: '30vh'
-                        }}>
+                    <div className='card card__two'>
                         <h1 className='card__title'>Правила задания</h1>
                         <a style={{
                             fontSize: '20px'

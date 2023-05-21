@@ -20,8 +20,11 @@ function TaskOne(props) {
                                 <div className='card card__task'>
                                     <h1>{props.title}</h1>
                                     <div className='card__descr'>{props.descr}</div>
-                                    <div style={{justifyContent:"centre"}}>
-                                    <Btn hf="/taskOne/1" descr="Далее"/>
+                                    <div style={{ 
+                                    display: 'flex', 
+                                    justifyContent: 'space-between'
+                                    }}>
+                                        <Btn hf="/taskOne/1" descr="Далее" />
                                     </div>
                                 </div>
                             </div>
