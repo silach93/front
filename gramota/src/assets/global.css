@@ -48,6 +48,15 @@ body {
     padding: 0 10%;
 }
 
+.warp__login,
+.warp__reg{
+    display: flex;
+    justify-content: center;
+    background-image: url(backgroundtaskone.jpg);
+    filter: brightness(88%);
+    padding: 0 10%;
+}
+
 .container{
     display: flex;
 }
@@ -185,7 +194,7 @@ body {
 }
 
 .card__reg{
-    width: 500px;
+    height: 50vh;
     padding: 45px;
 }
 
@@ -259,7 +268,7 @@ body {
 
 .btn__regpage{
     border-radius: 15px;
-    width: 150px;
+    width: 200px;
     height: 30px;
 }
 
@@ -282,9 +291,14 @@ body {
 
 /* инпуты */
 
-input{
+.input_klava{
     width: 10wh;
 
+}
+
+.input__login,
+.input__reg{
+    width: auto;
 }
 
 /* игровая доска*/
@@ -329,7 +343,17 @@ css
     height: 100vh;
 }
 
-  input {
+.input__textklava{
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+  .input__klava {
     width: 100%;
     height: 100px;
     padding: 20px;

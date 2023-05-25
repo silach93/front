@@ -107,7 +107,7 @@ const router = createBrowserRouter([
   ,
   {
     path: "/taskTwo",
-    element: <InputTask />,
+    element: <InputTask text='Вам нужно написать текст.' />,
     errorElement: <ErrorPage />,
   }
 ]);
