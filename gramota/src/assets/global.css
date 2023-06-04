@@ -57,6 +57,14 @@ body {
     padding: 0 10%;
 }
 
+form.form-login{
+   display: table; 
+}
+
+form.form-login{
+   display: table; 
+}
+
 .container{
     display: flex;
 }

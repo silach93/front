@@ -69,7 +69,7 @@ export default function InputTask(props) {
             console.log(input, Lettercount)
             return Lettercount;
         }
-        if (point > 0) setPoint(point - 1)
+        if (point <= 0) setPoint(point - 1)
         return Lettercount;
     };
 

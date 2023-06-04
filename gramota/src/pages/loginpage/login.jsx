@@ -7,6 +7,7 @@ function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
   };
@@ -26,7 +27,7 @@ function Login() {
         'pass':password
     })
             .then(response => {
-                if(response.data.error === "error") alert("ИДИ НАХУЙ ДОЛБАЁБ")
+                if(response.data.error === "error") alert("Неверные логин или пароль")
                 else navigate('/')
                 console.log(response)
             })
@@ -36,7 +37,9 @@ function Login() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className='warp warp__login'>
+      <form onSubmit={handleSubmit} className='form-login'>
+      <div className='card card__login'>
       <TextField
         label="Имя пользователя"
         variant="outlined"
@@ -53,7 +56,9 @@ function Login() {
       <Button onClick={auth} variant="contained" type="submit">
         Войти
       </Button>
+      </div>
     </form>
+    </div>
   );
 }
 

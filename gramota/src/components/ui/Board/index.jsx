@@ -30,23 +30,23 @@ class Board extends React.Component {
   }
 
 
-  // handleClick = (index) => {
-  //   const { cells, activeCell } = this.state;
-  //   if (index === activeCell) {
-  //      point++
-  //     this.timer = setInterval(() => {
-  //       this.componentWillUnmount();
-  //       const newCells = [...cells];
-  //       newCells[activeCell] = false;
-  //       let newActiveCell;
-  //       do {
-  //         newActiveCell = Math.floor(Math.random() * 100);
-  //       } while (newActiveCell === activeCell);
-  //       newCells[newActiveCell] = true;
-  //       this.setState({ cells: newCells, activeCell: newActiveCell });
-  //     },3000)
-  //   }
-  // }
+  handleClick = (index) => {
+    const { cells, activeCell } = this.state;
+    if (index === activeCell) {
+       point++
+      this.timer = setInterval(() => {
+        this.componentWillUnmount();
+        const newCells = [...cells];
+        newCells[activeCell] = false;
+        let newActiveCell;
+        do {
+          newActiveCell = Math.floor(Math.random() * 100);
+        } while (newActiveCell === activeCell);
+        newCells[newActiveCell] = true;
+        this.setState({ cells: newCells, activeCell: newActiveCell });
+      },3000)
+    }
+  }
 
   render() {
     const rows = [];
