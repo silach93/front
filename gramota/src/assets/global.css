@@ -2,11 +2,11 @@
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
-  
+
     color-scheme: light dark;
     color: rgba(0, 0, 0, 0.87);
     background-color: #dfdfdf;
-  
+
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -18,7 +18,7 @@ body {
     margin: 0;
     padding: 0;
 }
-    
+
 
 .warp {
     background-repeat: no-repeat;
@@ -36,36 +36,37 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-  }
+}
 
 .warp__home {
     background-image: url(backgroundhome.jpg);
 }
 
-.warp__task{
+.warp__task {
     background-image: url(backgroundtaskone.jpg);
     filter: brightness(88%);
     padding: 0 10%;
 }
 
 .warp__login,
-.warp__reg{
+.warp__reg {
     display: flex;
     justify-content: center;
+    align-items: center;
     background-image: url(backgroundtaskone.jpg);
     filter: brightness(88%);
     padding: 0 10%;
 }
 
-form.form-login{
-   display: table; 
+form.form-login {
+    display: table;
 }
 
-form.form-login{
+/* form.form-login{
    display: table; 
-}
+} */
 
-.container{
+.container {
     display: flex;
 }
 
@@ -75,7 +76,7 @@ form.form-login{
     padding: 0 10%;
 }
 
-.warp__game1{
+.warp__game1 {
     display: flex;
     justify-content: center;
     background-image: url(backgroundtaskone.jpg);
@@ -83,7 +84,7 @@ form.form-login{
     padding: 0 10%;
 }
 
-.pagegame{
+.pagegame {
     display: flex;
     align-items: center;
 }
@@ -98,7 +99,7 @@ form.form-login{
 
 
 
-.mainpage__home{
+.mainpage__home {
     height: 100vh;
     padding: 0 15px;
     margin: 0 auto;
@@ -106,13 +107,13 @@ form.form-login{
     gap: 30px;
 }
 
-.mainpage__task{
+.mainpage__task {
     justify-content: space-between;
     padding: 0 600px;
     margin: 0 auto;
 }
 
-.mainpage__login{
+.mainpage__login {
     justify-content: center;
     padding: 0;
     margin-left: 0;
@@ -155,10 +156,22 @@ form.form-login{
     width: 730px;
 }
 
-.card_wrap1{
+.card_wrap1 {
     display: flex;
     justify-content: flex-end;
 
+}
+
+.parent_popup {
+
+    background: #000;
+    height: 100%;
+    opacity: 0.9;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
 }
 
 /* карточки */
@@ -171,7 +184,7 @@ form.form-login{
 
 
 
-.card__taskglobal{
+.card__taskglobal {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -180,7 +193,7 @@ form.form-login{
     padding: 0;
     height: 100vh;
     background: rgb(210, 210, 210);
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .card__task {
@@ -190,27 +203,44 @@ form.form-login{
 
 }
 
-.card__two{
+.card__two {
     background: rgb(184, 224, 207);
     width: 20vw;
 }
 
-.card__login{
+.card__login {
     position: relative;
     display: grid;
-    width: 500px
-}
-
-.card__reg{
-    height: 50vh;
+    align-items: center;
+    width: 25vw;
+    height: 60vh;
     padding: 45px;
 }
 
-.card__game{
+.card__reg {
+    position: relative;
+    display: grid;
+    height: 70vh;
+    padding: 45px;
+}
+
+.card__game {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 20vw;
+}
+
+.card__popup{
+    #popup {
+        background-color: #00f;
+        height: 200px;
+        position: fixed;
+        top: 100px;
+        left: 40%;
+        color: #f00;
+        width: 300px;
+      }
 }
 
 /* внутрености карточек */
@@ -269,12 +299,12 @@ form.form-login{
     top: 35.5%;
 }
 
-.btn__loginpage{
+.btn__loginpage {
     border-radius: 15px;
     height: 30px;
 }
 
-.btn__regpage{
+.btn__regpage {
     border-radius: 15px;
     width: 200px;
     height: 30px;
@@ -299,59 +329,58 @@ form.form-login{
 
 /* инпуты */
 
-.input_klava{
+.input_klava {
     width: 10wh;
 
 }
 
 .input__login,
-.input__reg{
+.input__reg {
     width: auto;
 }
 
 /* игровая доска*/
 
-css
-.board {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 500px;
-  height: 500px;
+css .board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
 }
 
 .row {
-  display: flex;
+    display: flex;
 }
 
 .cell {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #a9a9a9;
-  margin: 2px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #a9a9a9;
+    margin: 2px;
 }
 
 .cell.active {
     background-color: #f00;
-  }
+}
 
-  /* текст */
+/* текст */
 
-  .gamedecr{
+.gamedecr {
     font-size: 24px;
-  }
+}
 
-  /* клавиатура */
-.container-klava{
+/* клавиатура */
+.container-klava {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.input__textklava{
+.input__textklava {
     width: 100%;
     height: 100px;
     padding: 20px;
@@ -361,7 +390,7 @@ css
     box-sizing: border-box;
 }
 
-  .input__klava {
+.input__klava {
     width: 100%;
     height: 100px;
     padding: 20px;
@@ -369,9 +398,8 @@ css
     border: none;
     border-radius: 15px;
     box-sizing: border-box;
-  }
-  
-  .simple-keyboard {
+}
+
+.simple-keyboard {
     max-width: 850px;
-  }
-  
+}

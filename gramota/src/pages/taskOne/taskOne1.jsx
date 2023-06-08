@@ -3,8 +3,8 @@ import Btn from "../../components/ui/Button";
 
 function TaskOne1(props) {
 
-    
-    
+
+
     return (
         <>
             <div className='warp'>
@@ -22,12 +22,12 @@ function TaskOne1(props) {
                                 <div className='card card__task'>
                                     <h1>{props.title}</h1>
                                     <div className='card__descr'>{props.descr}</div>
-                                    <div style={{ 
-                                    display: 'flex', 
-                                    justifyContent: 'space-between'
-                                    }}>
-                                    <Btn hf="/taskOne/" descr="Назад"/>
-                                    <Btn hf="/taskOne/2" descr="Далее"/>
+                                    <div style={{
+                                        display: 'flex',
+                                        justifyContent: 'space-between'
+                                        }}>
+                                        <Btn hf="/taskOne/" descr="Назад" />
+                                        <Btn hf="/taskOne/2" descr="Далее" />
                                     </div>
                                 </div>
                             </div>

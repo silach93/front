@@ -21,44 +21,46 @@ function Login() {
     // код для отправки данных на сервер и проверки авторизации
   };
 
-  function auth(){
+  function auth() {
     axios.post('http://localhost:5555/auth', {
-        'login':username,
-        'pass':password
+      'login': username,
+      'pass': password
     })
-            .then(response => {
-                if(response.data.error === "error") alert("Неверные логин или пароль")
-                else navigate('/')
-                console.log(response)
-            })
-            .catch(err => {
-                console.log(err.response)
-            })
+      .then(response => {
+        if (response.data.error === "error") alert("Неверные логин или пароль")
+        else navigate('/')
+        console.log(response)
+      })
+      .catch(err => {
+        console.log(err.response)
+      })
   }
 
   return (
-    <div className='warp warp__login'>
-      <form onSubmit={handleSubmit} className='form-login'>
-      <div className='card card__login'>
-      <TextField
-        label="Имя пользователя"
-        variant="outlined"
-        value={username}
-        onChange={handleUsernameChange}
-      />
-      <TextField
-        label="Пароль"
-        variant="outlined"
-        type="password"
-        value={password}
-        onChange={handlePasswordChange}
-      />
-      <Button onClick={auth} variant="contained" type="submit">
-        Войти
-      </Button>
+    <>
+      <div className='warp warp__login'>
+        <form onSubmit={handleSubmit} className='form-login'>
+          <div className='card card__login'>
+            <TextField
+              label="Имя пользователя"
+              variant="outlined"
+              value={username}
+              onChange={handleUsernameChange}
+            />
+            <TextField
+              label="Пароль"
+              variant="outlined"
+              type="password"
+              value={password}
+              onChange={handlePasswordChange}
+            />
+            <Button onClick={auth} style={{backgroundColor: "#6CCAA8aa"}} variant="contained" type="submit">
+              Войти
+            </Button>
+          </div>
+        </form>
       </div>
-    </form>
-    </div>
+    </>
   );
 }
 

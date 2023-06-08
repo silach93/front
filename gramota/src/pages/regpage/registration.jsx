@@ -1,14 +1,23 @@
 import axios from 'axios';
 import { TextField, Button } from '@mui/material';
+import Alert from '@mui/material/Alert';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-
-
-const theme = createTheme();
+const theme = createTheme({
+    palette: {
+        secondary: {
+            main: '#6ccaa8'
+        },
+        // primary: {
+        //     main:
+        // }
+    }
+});
 
 
 export default function RegistrationForm() {
 
+        const[alert,set_Alert] = useState(false);
 
     let user =
     {
@@ -21,7 +30,7 @@ export default function RegistrationForm() {
         password: '',
     }
 
-
+    let confirmPassword;
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -44,82 +53,92 @@ export default function RegistrationForm() {
             case 'password':
                 user.password = value;
                 break
-
-            default: break
+            case 'confirmPassword':
+                confirmPassword = value;
         }
     }
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(user);
+        // console.log(user);
     }
-    
-    function usercreate ()  {
-        // let human = CircularJSON.stringify(user);
-        console.log(user);
-        axios.post('http://localhost:5555/register', user)
-            .then(response => {
-                console.log(response)
-            })
+
+    function usercreate() {
+        if (user.password === confirmPassword) {
+            console.log(user);
+            axios.post('http://localhost:5555/register', user)
+                .then(response => {
+                    console.log(response)
+                })
+            
+        }
+        else {set_Alert=true}
     }
 
     return (
-        <ThemeProvider theme={theme} >
-            <form onSubmit={handleSubmit}>
-                <TextField
-                    label="Login"
-                    name="login"
-                    onChange={handleChange}
-                    margin="normal"
-                    required
-                />
-                <TextField
-                    label="First Name"
-                    name="firstName"
-                    onChange={handleChange}
-                    margin="normal"
-                    required
-                />
-                <TextField
-                    label="Middle name"
-                    name="middleName"
-                    onChange={handleChange}
-                    margin="normal"
-                    required
-                />
-                <TextField
-                    label="Last Name"
-                    name="lastName"
-                    onChange={handleChange}
-                    margin="normal"
-                    required
-                />
-                <TextField
-                    label="Phone"
-                    type="tel"
-                    name="phone"
-                    onChange={handleChange}
-                    margin="normal"
-                    required
-                />
-                <TextField
-                    label="Password"
-                    type="password"
-                    name="password"
-                    onChange={handleChange}
-                    margin="normal"
-                    required
-                />
-                <TextField
-                    label="Confirm Password"
-                    type="password"
-                    name="confirmPassword"
-                    onChange={handleChange}
-                    margin="normal"
-                    required
-                />
-                <Button type="submit" variant="contained" onClick={usercreate} color="primary">Зарегистрироваться</Button>
-            </form>
-        </ThemeProvider>
+        <>
+            <div className='warp warp__login'>
+                <form onSubmit={handleSubmit} className='form-login'>
+                    <div className='card card__login'>
+                        <ThemeProvider theme={theme}>
+                            <TextField
+                                label="Логин"
+                                name="login"
+                                onChange={handleChange}
+                                margin="normal"
+                                required
+                            />
+                            <TextField
+                                label="Имя"
+                                name="firstName"
+                                onChange={handleChange}
+                                margin="normal"
+                                required
+                            />
+                            <TextField
+                                label="Фамилия"
+                                name="middleName"
+                                onChange={handleChange}
+                                margin="normal"
+                                required
+                            />
+                            <TextField
+                                label="Отчество"
+                                name="lastName"
+                                onChange={handleChange}
+                                margin="normal"
+                                required
+                            />
+                            <TextField
+                                label="Телефон"
+                                type="tel"
+                                name="phone"
+                                onChange={handleChange}
+                                margin="normal"
+                                required
+                            />
+                            <TextField
+                                label="Пароль"
+                                type="password"
+                                name="password"
+                                onChange={handleChange}
+                                margin="normal"
+                                required
+                            />
+                            <TextField
+                                label="Повтор пароля"
+                                type="password"
+                                name="confirmPassword"
+                                onChange={handleChange}
+                                margin="normal"
+                                required
+                            />
+                            <Button type="submit" variant="contained" onClick={usercreate} color="secondary">Зарегистрироваться</Button>
+                            <Alert action={alert?true:false} color='warning'/>
+                        </ThemeProvider>
+                    </div>
+                </form>
+            </div>
+        </>
     );
 }
